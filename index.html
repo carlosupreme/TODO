@@ -18,13 +18,15 @@
   <h1 class="text-center">Workout App</h1>
 
   <form class="mt-4">
-    <input autocomplete="off" required type="text" name="actividad" class="form-control mb-3" id="name" placeholder="Nombre del ejercicio">
+    <input autocomplete="off" required type="text" name="actividad" class="form-control mb-3" id="name"
+      placeholder="Nombre del ejercicio">
     <div class="input-group mb-3">
-      <input  required name="reps" type="number" class="form-control" placeholder="Repeticiones" aria-label="Repeticiones">
-      <input required  name="sets" type="number" class="form-control" placeholder="Sets" aria-label="Sets">
+      <input required name="reps" type="number" class="form-control" placeholder="Repeticiones"
+        aria-label="Repeticiones">
+      <input required name="sets" type="number" class="form-control" placeholder="Sets" aria-label="Sets">
     </div>
     <div class="input-group mb-3">
-      <input  required name="weight" type="number" class="form-control" placeholder="Peso" aria-label="Peso">
+      <input required name="weight" type="number" class="form-control" placeholder="Peso" aria-label="Peso">
       <span class="input-group-text">kg</span>
     </div>
 
@@ -47,12 +49,13 @@
         </tr>
       </thead>
       <tbody>
-       
+
       </tbody>
     </table>
     <button class="btn btn-outline-primary fas fa-sync-alt" id="reset"></button>
   </div>
   <script src="./index.js" type="module"></script>
+  <script src="./offline_script.js" type="module"></script>
 </body>
 
 </html>

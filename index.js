@@ -5,7 +5,13 @@ const d = document,
 
 let list = [];
 let id = 0;
+
 document.addEventListener("DOMContentLoaded", showLS);
+
+$resetBtn.addEventListener("click",e=>{
+  list.forEach(el=>el.status = false)
+  save()
+})
 
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -100,7 +106,3 @@ function edit(rowID) {
   save();
 }
 
-$resetBtn.addEventListener("click",e=>{
-  list.forEach(el=>el.status = false)
-  save()
-})
