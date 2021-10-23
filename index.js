@@ -6,7 +6,10 @@ const d = document,
 let list = [];
 let id = 0;
 
-document.addEventListener("DOMContentLoaded", showLS);
+document.addEventListener("DOMContentLoaded", ()=>{
+  registerSW()
+  showLS()
+});
 
 $resetBtn.addEventListener("click",e=>{
   list.forEach(el=>el.status = false)
@@ -106,3 +109,12 @@ function edit(rowID) {
   save();
 }
 
+async function registerSW(){
+  if("serviceWorker" in navigator){
+    try {
+      await navigator.serviceWorker.register("./sw.js");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}
